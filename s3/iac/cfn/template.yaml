@@ -1,10 +1,9 @@
 AWSTemplateFormatVersion: "2010-09-09"
-Description: A sample S3 bucket
+Description: A sample s3 bucket
 Resources:
   S3Bucket:
   #https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html
     Type: 'AWS::S3::Bucket'
-    DeletionPolicy: Retain
-    Properties:
-      BucketName: DOC-EXAMPLE-BUCKET
+    # We don't need to supply a bucket Name as AWS will generate a random mane for us
+
       

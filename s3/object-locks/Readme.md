@@ -20,6 +20,12 @@ aws s3api put-object-lock-configuration \
   }
 }'
 
+## Turn on Object Locking by running .json
+# json file內{}前後不可有單引號
+aws s3api put-object-lock-configuration \
+--bucket object-lock-fun-ab-0612 \
+--object-lock-configuration file://default.json
+
 # Check the bucket object-lock is enabled
 aws s3api get-object-lock-configuration --bucket object-lock-fun-ab-0610
 

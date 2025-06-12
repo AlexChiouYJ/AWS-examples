@@ -31,3 +31,12 @@ aws s3api get-object-lock-configuration --bucket object-lock-fun-ab-0610
 
 # New file and upload
 echo "This is the gov" > gov.txt
+
+# Delete the file
+aws s3 rm s3://object-lock-fun-ab-0610/gov.txt
+
+# List object versions
+aws s3api list-object-versions --bucket object-lock-fun-ab-0610 --key gov.txt
+
+# Delete versioned file
+aws s3api get-object-versions --bucket object-lock-fun-ab-0610 --key gov.txt

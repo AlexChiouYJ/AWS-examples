@@ -29,3 +29,5 @@ aws s3api put-object-lock-configuration \
 # Check the bucket object-lock is enabled
 aws s3api get-object-lock-configuration --bucket object-lock-fun-ab-0610
 
+# New file and upload
+echo "This is the gov" > gov.txt
